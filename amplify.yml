@@ -13,7 +13,7 @@ frontend:
         - mv .amplify-hosting/client .amplify-hosting/static
         - mkdir -p .amplify-hosting/compute
         - mv .amplify-hosting/server .amplify-hosting/compute/default
-        - pnpm install --omit dev --frozen-lockfile
+        - pnpm install --prod --frozen-lockfile
         - cp package.json .amplify-hosting/compute/default
         - cp -r node_modules .amplify-hosting/compute/default
         - cp server.js .amplify-hosting/compute/default
