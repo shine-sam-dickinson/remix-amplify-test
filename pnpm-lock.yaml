@@ -38,6 +38,9 @@ importers:
       '@remix-run/serve':
         specifier: ^2.12.1
         version: 2.12.1(typescript@5.6.2)
+      '@strapi/blocks-react-renderer':
+        specifier: ^1.0.1
+        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       auto-zustand-selectors-hook:
         specifier: ^2.0.5
         version: 2.0.5(zustand@5.0.0-rc.2(@types/react@18.3.8)(react@18.3.1))
@@ -867,6 +870,12 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@strapi/blocks-react-renderer@1.0.1':
+    resolution: {integrity: sha512-oHQNYstM/361oJIKrj6wDFZhDWHg8M8sF7SszqWr8zH2EaoL36ccLq7F2XFWShYQshuKgY+V6axurDaxWo4jQA==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
 
   '@tailwindcss/typography@0.5.15':
     resolution: {integrity: sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==}
@@ -4365,6 +4374,11 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
+
+  '@strapi/blocks-react-renderer@1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@tailwindcss/typography@0.5.15(tailwindcss@3.4.12)':
     dependencies:
