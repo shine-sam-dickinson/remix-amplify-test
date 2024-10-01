@@ -4,15 +4,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - corepack enable pnpm
+        - pnpm ci
     build:
       commands:
-        - npm run build
+        - pnpm run build
         - mv build .amplify-hosting
         - mv .amplify-hosting/client .amplify-hosting/static
         - mkdir -p .amplify-hosting/compute
         - mv .amplify-hosting/server .amplify-hosting/compute/default
-        - npm ci --omit dev
+        - pnpm ci --omit dev
         - cp package.json .amplify-hosting/compute/default
         - cp -r node_modules .amplify-hosting/compute/default
         - cp server.js .amplify-hosting/compute/default
