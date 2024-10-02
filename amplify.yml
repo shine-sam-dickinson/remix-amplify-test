@@ -6,7 +6,7 @@ backend:
       commands:
         - "# Execute Amplify CLI with the helper script"
         - envCache --set stackInfo ""
-        - amplifyPush --simple
+        - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
     preBuild:
@@ -28,3 +28,7 @@ frontend:
     files:
       - "**/*"
     baseDirectory: .amplify-hosting
+  cache:
+    paths:
+      - .npm/**/*
+      - node_modules/**/*
