@@ -4,19 +4,18 @@
  * For more information, see https://remix.run/file-conventions/entry.client
  */
 import { RemixBrowser } from "@remix-run/react";
-import { startTransition, StrictMode, useEffect } from "react";
+import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 // eslint-disable-next-line import/no-named-as-default
-import posthog from "posthog-js";
 
 function PosthogInit() {
-  useEffect(() => {
-    posthog.init("phc_XT3WSEYuEXGYhxdKowto6EM5ds6TBLhrPP7lScPUVyA", {
-      // api_host: "https://us.i.posthog.com",
-      api_host: "/flag",
-      person_profiles: "always", // or 'always' to create profiles for anonymous users as well
-    });
-  }, []);
+  // useEffect(() => {
+  //   posthog.init("phc_XT3WSEYuEXGYhxdKowto6EM5ds6TBLhrPP7lScPUVyA", {
+  //     // api_host: "https://us.i.posthog.com",
+  //     api_host: "/flag",
+  //     person_profiles: "always", // or 'always' to create profiles for anonymous users as well
+  //   });
+  // }, []);
 
   return null;
 }
