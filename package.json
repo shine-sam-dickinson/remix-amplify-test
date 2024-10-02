@@ -29,7 +29,6 @@
     "flagsmith": "^4.1.4",
     "isbot": "^4.1.0",
     "lucide-react": "^0.445.0",
-    "posthog-js": "^1.163.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.5.2",
@@ -55,6 +54,11 @@
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "overrides": {
+    "@openfeature/flagsmith-client-provider": {
+      "flagsmith": "$flagsmith"
+    }
   },
   "engines": {
     "node": ">=20.0.0"
