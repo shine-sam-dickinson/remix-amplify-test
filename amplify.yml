@@ -14,6 +14,7 @@ frontend:
         - mkdir -p ./.amplify-hosting/compute
         - cp -r ./build ./.amplify-hosting/compute/default
         - cp server.mjs ./.amplify-hosting/compute/default/server.mjs
+        - cp amplify/package.json ./.amplify-hosting/compute/default/package.json
         - npm ci --omit dev
         - cp -r ./node_modules ./.amplify-hosting/compute/default/node_modules
         - cp -r public ./.amplify-hosting/static
